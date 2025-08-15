@@ -1,0 +1,32 @@
+
+# Netlify configuration file to fix JavaScript module MIME type errors
+# Place this file in the root of your project (same level as your package.json or index.html)
+
+# Set proper MIME types for JavaScript modules
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+# If you're using .mjs files, add this as well
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+# Optional: Add CORS headers if needed
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+# Optional: Configure redirects if needed
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
