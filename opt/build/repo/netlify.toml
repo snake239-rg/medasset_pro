@@ -1,6 +1,6 @@
 [build]
 command = "npm run build"
-publish = "dist"
+publish = "build"
 
 [[headers]]
 for = "/*.js"
@@ -13,4 +13,5 @@ for = "/*.mjs"
 [headers.values]
 Content-Type = "text/javascript"
 Access-Control-Allow-Origin = "*"
+
 
